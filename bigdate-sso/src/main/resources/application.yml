@@ -11,3 +11,4 @@ server:
     uri-encoding: utf-8
 spring:
   profile: dev
+
