@@ -12,3 +12,7 @@ server:
 spring:
   profile: dev
 
+  datasource:
+    url: jdbc:mysql://localhost:3306/bigdate
+    username: root
+    password: Jjuyuwang.001
