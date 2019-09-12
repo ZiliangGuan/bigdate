@@ -1,0 +1,13 @@
+
+spring:
+  profiles:
+    active: dev
+
+---
+# 开发/测试环境
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  profile: dev
