@@ -1,5 +1,9 @@
 package in.iask.pluto.bigdate.sso.bean;
 
+import lombok.Data;
+
+import java.util.Date;
+
 /**
  * @Description
  * @Author Guan Ziliang
@@ -7,6 +11,7 @@ package in.iask.pluto.bigdate.sso.bean;
  * @CreateDate 2019/9/13 12:29 下午
  **/
 
+@Data
 public class UmsMember {
 
 
@@ -17,10 +22,10 @@ public class UmsMember {
     private String nickname;
     private String phone;
     private long status;
-    private java.sql.Timestamp createTime;
+    private Date createTime;
     private String icon;
     private long gender;
-    private java.sql.Date birthday;
+    private Date birthday;
     private String city;
     private String job;
     private String personalizedSignature;
@@ -29,177 +34,6 @@ public class UmsMember {
     private long growth;
     private long luckyCount;
     private long historyIntegration;
-
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-
-    public long getMemberLevelId() {
-        return memberLevelId;
-    }
-
-    public void setMemberLevelId(long memberLevelId) {
-        this.memberLevelId = memberLevelId;
-    }
-
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
-
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-
-    public long getStatus() {
-        return status;
-    }
-
-    public void setStatus(long status) {
-        this.status = status;
-    }
-
-
-    public java.sql.Timestamp getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(java.sql.Timestamp createTime) {
-        this.createTime = createTime;
-    }
-
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-
-    public long getGender() {
-        return gender;
-    }
-
-    public void setGender(long gender) {
-        this.gender = gender;
-    }
-
-
-    public java.sql.Date getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(java.sql.Date birthday) {
-        this.birthday = birthday;
-    }
-
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-
-    public String getJob() {
-        return job;
-    }
-
-    public void setJob(String job) {
-        this.job = job;
-    }
-
-
-    public String getPersonalizedSignature() {
-        return personalizedSignature;
-    }
-
-    public void setPersonalizedSignature(String personalizedSignature) {
-        this.personalizedSignature = personalizedSignature;
-    }
-
-
-    public long getSourceType() {
-        return sourceType;
-    }
-
-    public void setSourceType(long sourceType) {
-        this.sourceType = sourceType;
-    }
-
-
-    public long getIntegration() {
-        return integration;
-    }
-
-    public void setIntegration(long integration) {
-        this.integration = integration;
-    }
-
-
-    public long getGrowth() {
-        return growth;
-    }
-
-    public void setGrowth(long growth) {
-        this.growth = growth;
-    }
-
-
-    public long getLuckyCount() {
-        return luckyCount;
-    }
-
-    public void setLuckyCount(long luckyCount) {
-        this.luckyCount = luckyCount;
-    }
-
-
-    public long getHistoryIntegration() {
-        return historyIntegration;
-    }
-
-    public void setHistoryIntegration(long historyIntegration) {
-        this.historyIntegration = historyIntegration;
-    }
 
 
 }
