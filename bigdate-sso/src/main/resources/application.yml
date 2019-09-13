@@ -15,7 +15,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bigdate
     username: root
-    password: Jjuyuwang.001
+    password: Jjuyuwang001
 
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml

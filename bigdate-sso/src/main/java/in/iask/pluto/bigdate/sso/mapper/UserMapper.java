@@ -1,10 +1,13 @@
 package in.iask.pluto.bigdate.sso.mapper;
 
+import in.iask.pluto.bigdate.sso.bean.UmsMember;
 import in.iask.pluto.bigdate.sso.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Description
@@ -14,15 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 
 
-@RestController
-public class UserMapper {
 
-    @Autowired
-    UserService userService;
+public interface UserMapper {
 
-    @RequestMapping("/hello")
-    public String index() {
-        return "Hello user";
-    }
 
+    List<UmsMember> selectAllUser();
 }
