@@ -1,8 +1,11 @@
 package in.iask.pluto.bigdate.sso.service.impl;
 
-import in.iask.pluto.bigdate.sso.bean.UmsMember;
+
+import in.iask.pluto.bigdate.bean.UmsMember;
+import in.iask.pluto.bigdate.bean.UmsMemberAddress;
+import in.iask.pluto.bigdate.service.UserService;
+import in.iask.pluto.bigdate.sso.mapper.UmsMemberReceiveAddressMapper;
 import in.iask.pluto.bigdate.sso.mapper.UserMapper;
-import in.iask.pluto.bigdate.sso.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,12 +23,28 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    UmsMemberReceiveAddressMapper umsMemberReceiveAddressMapper;
 
 
     @Override
     public List<UmsMember> getAllUser() {
-        List<UmsMember> umsMembersList = userMapper.selectAllUser();
+        List<UmsMember> umsMembersList = userMapper.selectAllUser();//userMapper.selectAllUser();
         return umsMembersList;
+    }
+
+    @Override
+    public List<UmsMemberAddress> getMemberReceiveAddressbyMemberId(String memberId) {
+
+        UmsMemberAddress umsMemberReceiveAddress = new UmsMemberAddress();
+        umsMemberReceiveAddress.setMemberId(memberId);
+        List<UmsMemberAddress> umsMemberReceiveAddresses = umsMemberReceiveAddressMapper.select(umsMemberReceiveAddress);
+        return umsMemberReceiveAddresses;
+
+        //Example example = new Example(UmsMemberAddress.class);
+        //example.createCriteria().andEqualTo("memberId", memberId);
+        //List<UmsMemberAddress> umsMemberAddresses = umsMemberReceiveAddressMapper.selectByExample(example);
+        //return  umsMemberAddresses;
     }
 
 }

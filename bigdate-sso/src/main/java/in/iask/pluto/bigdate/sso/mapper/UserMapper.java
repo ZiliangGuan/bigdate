@@ -1,12 +1,10 @@
 package in.iask.pluto.bigdate.sso.mapper;
 
-import in.iask.pluto.bigdate.sso.bean.UmsMember;
-import in.iask.pluto.bigdate.sso.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+
+
+import in.iask.pluto.bigdate.bean.UmsMember;
+import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
@@ -18,7 +16,7 @@ import java.util.List;
  **/
 
 
-public interface UserMapper {
+public interface UserMapper extends Mapper<UmsMember> {
 
     List<UmsMember> selectAllUser();
 

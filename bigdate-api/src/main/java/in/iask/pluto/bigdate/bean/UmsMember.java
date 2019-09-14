@@ -1,7 +1,11 @@
-package in.iask.pluto.bigdate.sso.bean;
+package in.iask.pluto.bigdate.bean;
 
 import lombok.Data;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,9 +16,10 @@ import java.util.Date;
  **/
 
 @Data
-public class UmsMember {
+public class UmsMember implements Serializable {
 
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long memberLevelId;
     private String username;
