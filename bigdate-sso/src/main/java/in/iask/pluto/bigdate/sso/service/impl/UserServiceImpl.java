@@ -8,6 +8,7 @@ import in.iask.pluto.bigdate.sso.mapper.UmsMemberReceiveAddressMapper;
 import in.iask.pluto.bigdate.sso.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
