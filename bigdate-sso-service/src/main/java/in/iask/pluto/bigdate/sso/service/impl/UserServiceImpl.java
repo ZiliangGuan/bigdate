@@ -1,14 +1,15 @@
 package in.iask.pluto.bigdate.sso.service.impl;
 
 
+
+
+import com.alibaba.dubbo.config.annotation.Service;
 import in.iask.pluto.bigdate.bean.UmsMember;
 import in.iask.pluto.bigdate.bean.UmsMemberAddress;
 import in.iask.pluto.bigdate.service.UserService;
 import in.iask.pluto.bigdate.sso.mapper.UmsMemberReceiveAddressMapper;
 import in.iask.pluto.bigdate.sso.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 

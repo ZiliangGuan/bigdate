@@ -2,10 +2,10 @@ package in.iask.pluto.bigdate.sso.controller;
 
 
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import in.iask.pluto.bigdate.bean.UmsMember;
 import in.iask.pluto.bigdate.bean.UmsMemberAddress;
 import in.iask.pluto.bigdate.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,7 +21,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @Autowired
+    @Reference
     UserService userService;
 
 
