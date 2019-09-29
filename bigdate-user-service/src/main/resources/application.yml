@@ -1,0 +1,37 @@
+
+spring:
+  profiles:
+    active: dev
+
+---
+# 开发/测试环境
+server:
+  port: 8075
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  profile: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/bigdate
+    username: root
+    password: Jjuyuwang001
+
+  dubbo:
+    application:
+      name: user-service
+    protocol:
+      name: dubbo
+    registry:
+      address: zookeeper://10.27.1.131:2181
+    base-package: in.iask.pluto.bigdate
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: info # (OFF) -> (FATAL) -> ERROR -> WARN -> INFO -> DEBUG -> (ALL)
+

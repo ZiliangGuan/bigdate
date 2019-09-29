@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="in.iask.pluto.bigdate.user.mapper.RoleMapper">
+
+    <resultMap id="result" type="in.iask.pluto.bigdate.bean.Role">
+        <result property="id" column="id" />
+        <result property="parent_id" column="parent_id" />
+        <result property="role_name" column="role_name" />
+        <result property="create_date" column="create_date" />
+        <result property="role_des" column="role_des" />
+    </resultMap>
+
+    <select id="getAllRole" resultMap="result">
+        select * from role
+    </select>
+
+    <select id="getRoleByParentId" resultMap="result">
+        select * from role where parent_id=#{parent_id}
+    </select>
+
+    <insert id="insertRole"
+            parameterType="in.iask.pluto.bigdate.bean.Role"
+            keyProperty="id"
+            useGeneratedKeys="true">
+        insert into role
+        (id,parent_id, role_name, create_date, role_des)
+        values (
+        #{id},
+        #{parent_id},
+        #{role_name},
+        #{create_date},
+        #{role_des}
+        )
+    </insert>
+
+
+</mapper>

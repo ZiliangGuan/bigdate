@@ -7,5 +7,5 @@
     <select id="selectAllUser" resultType="in.iask.pluto.bigdate.bean.UmsMember">
         select * from ums_member
     </select>
-    
+
 </mapper>

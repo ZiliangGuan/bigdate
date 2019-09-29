@@ -1,0 +1,27 @@
+
+
+spring:
+  profiles:
+    active: dev
+
+---
+# 开发/测试环境
+server:
+  port: 8076
+  tomcat:
+    uri-encoding: utf-8
+spring:
+  profile: dev
+
+  dubbo:
+    application:
+      name: user-web
+    protocol:
+      name: dubbo
+    registry:
+      address: zookeeper://10.27.1.131:2181
+    base-package: in.iask.pluto.bigdate
+
+logging:
+  level:
+    root: info # (OFF) -> (FATAL) -> ERROR -> WARN -> INFO -> DEBUG -> (ALL)
