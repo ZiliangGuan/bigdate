@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>12</java.version>
 
-        <fastjson.version>1.2.60</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <dubbo.version>2.6.7</dubbo.version>
         <zkclient.version>0.11</zkclient.version>
         <dubbo-start.version>2.7.3</dubbo-start.version>
